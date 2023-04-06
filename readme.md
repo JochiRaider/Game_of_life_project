@@ -209,4 +209,4 @@ Project Link: [https://github.com/JochiRaider/Game_of_life_project](https://gith
 [license-url]: https://github.com/JochiRaider/Game_of_life_project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/aaron-kahn
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: game_of_life.gif

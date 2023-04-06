@@ -121,20 +121,15 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/JochiRaider/Game_of_life_project.git
    ```
-3. Install NPM packages
+2. Install the required packages
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -142,9 +137,21 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To use the Game of Life project, follow the instructions below:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Ensure you have Python 3 and the required packages installed. You can install the necessary packages by running:
+   ```sh
+   pip install -r requirements.txt
+   ```
+2. Run the game_of_life.py script to start the simulation:
+   ```sh
+   python game_of_life.py
+   ```
+This will execute the Game of Life simulation using the default parameters. You can observe the evolution of the cellular automaton and see how different patterns emerge over time.
+
+For more advanced usage, you can modify the game_of_life.py script to change the initial conditions, grid size, or other parameters to explore different scenarios and behaviors in the Game of Life.
+
+Remember that you can also check the documentation and the code comments for more information on the implementation and possible optimizations.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -152,11 +159,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
 
 See the [open issues](https://github.com/JochiRaider/Game_of_life_project/issues) for a full list of proposed features (and known issues).
 
@@ -205,9 +207,9 @@ Project Link: [https://github.com/JochiRaider/Game_of_life_project](https://gith
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* The original creator of Conway's Game of Life, John Conway.[]()
+* OpenAI for providing the GPT-4 architecture, which ChatGPT is based on. []()
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

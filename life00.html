@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      canvas {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+      const ON = 255;
+      const OFF = 0;
+      const n = 100;
+      const updateInterval = 50;
+
+      const canvas = document.getElementById('gameCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = n;
+      canvas.height = n;
+
+      function randomGrid(n) {
+        const grid = new Array(n);
+        for (let i = 0; i < n; i++) {
+          grid[i] = new Array(n);
+          for (let j = 0; j < n; j++) {
+            grid[i][j] = Math.random() < 0.2 ? ON : OFF;
+          }
+        }
+        return grid;
+      }
+
+      function updateGrid(grid, n) {
+        const newGrid = grid.map((row) => row.slice());
+
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n; j++) {
+            const total =
+              (grid[(i - 1 + n) % n][(j - 1 + n) % n] +
+                grid[(i - 1 + n) % n][j] +
+		    grid[(i - 1 + n) % n][(j + 1) % n] +
+                grid[i][(j - 1 + n) % n] +
+                grid[i][(j + 1) % n] +
+                grid[(i + 1) % n][(j - 1 + n) % n] +
+                grid[(i + 1) % n][j] +
+                grid[(i + 1) % n][(j + 1) % n]) /
+              ON;
+
+            if (grid[i][j] === ON && (total < 2 || total > 3)) {
+              newGrid[i][j] = OFF;
+            } else if (grid[i][j] === OFF && total === 3) {
+              newGrid[i][j] = ON;
+            }
+          }
+        }
+
+        return newGrid;
+      }
+
+      function drawGrid(grid, n, ctx) {
+        ctx.clearRect(0, 0, n, n);
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n; j++) {
+            ctx.fillStyle = grid[i][j] === ON ? 'black' : 'white';
+            ctx.fillRect(j, i, 1, 1);
+          }
+        }
+      }
+
+      let grid = randomGrid(n);
+
+      function main() {
+        grid = updateGrid(grid, n);
+        drawGrid(grid, n, ctx);
+        setTimeout(main, updateInterval);
+      }
+
+

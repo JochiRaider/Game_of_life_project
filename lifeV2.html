@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        #gridSize, #colorScheme {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+<div id="controls">
+    <button id="zoomIn">Zoom In</button>
+    <button id="zoomOut">Zoom Out</button>
+    <button id="toggleWrap">Toggle Wrap</button>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+    <label for="gridSize">Grid Size:</label>
+    <input type="number" id="gridSize" value="100" min="10" max="500">
+    <label for="colorScheme">Color Scheme:</label>
+    <select id="colorScheme">
+        <option value="BW">Black & White</option>
+        <option value="RB">Red & Blue</option>
+        <option value="CG">Cyan & Green</option>
+    </select>
+    <span id="generation">Generation: 0</span>
+</div>
+<script>
+    const ON = 255;
+    const OFF = 0;
+    let n = 100;
+    const updateInterval = 50;
+
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    let cellSize = 5;
+    canvas.width = n * cellSize;
+    canvas.height = n * cellSize;
+
+    let isRunning = false;
+    let intervalId;
+
+    document.getElementById('start').addEventListener('click', () => {
+    if (!isRunning) {
+        isRunning = true;
+        intervalId = setInterval(main, updateInterval);
+    }
+});
+
+    document.getElementById('pause').addEventListener('click', () => {
+    if (isRunning) {
+        isRunning = false;
+        clearInterval(intervalId);
+    }
+});
+    document.getElementById('reset').addEventListener('click', () => {
+    grid = randomGrid(n);
+    generation = 0;
+    document.getElementById('generation').innerText = 'Generation: ' + generation;
+    drawGrid(grid, n, ctx, cellSize);
+}); 
+    
+    document.getElementById('start').addEventListener('click', startGame);
+
+    document.getElementById('pause').addEventListener('click', pauseGame);
+
+    document.getElementById('reset').addEventListener('click', resetGame);
+
+    let onColor = 'black';
+    let offColor = 'white';
+    let isWrapped = true;
+
+    function randomGrid(n) {
+        const grid = new Array(n);
+        for (let i = 0; i < n; i++) {
+          grid[i] = new Array(n);
+          for (let j = 0; j < n; j++) {
+            grid[i][j] = Math.random() < 0.2 ? ON : OFF;
+          }
+        }
+        return grid;
+    }
+
+    function updateGrid(grid, n) {
+        const newGrid = grid.map((row) => row.slice());
+
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n; j++) {
+            const total =
+              (grid[(i - 1 + n) % n][(j - 1 + n) % n] +
+                grid[(i - 1 + n) % n][j] +
+                grid[(i - 1 + n) % n][(j + 1) % n] +
+                grid[i][(j - 1 + n) % n] +
+                grid[i][(j + 1) % n] +
+                grid[(i + 1) % n][(j - 1 + n) % n] +
+                grid[(i + 1) % n][j] +
+                grid[(i + 1) % n][(j + 1) % n]) /
+              ON;
+
+            if (grid[i][j] === ON && (total < 2 || total > 3)) {
+              newGrid[i][j] = OFF;
+            } else if (grid[i][j] === OFF && total === 3) {
+              newGrid[i][j] = ON;
+            }
+          }
+    }
+    return newGrid;
+}
+
+    function drawGrid(grid, n, ctx, cellSize) {
+        ctx.clearRect(0, 0, n * cellSize, n * cellSize);
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                ctx.fillStyle = grid[i][j] === ON ? onColor : offColor;
+                ctx.fillRect(j * cellSize, i * cellSize, cellSize, cellSize);
+            }
+        }
+    }
+
+    let grid = randomGrid(n);
+    let generation = 0;
+
+    function main() {
+        grid = updateGrid(grid, n);
+        drawGrid(grid, n, ctx, cellSize);
+        generation++;
+        document.getElementById('generation').innerText = 'Generation: ' + generation;
+        setTimeout(main, updateInterval);
+    }
+
+    function changeGridSize(newSize) {
+        n = newSize;
+        canvas.width = n * cellSize;
+        canvas.height = n * cellSize;
+        grid = randomGrid(n);
+    }
+
+    function setColorScheme(newScheme){
+    if (newScheme === "BW") {
+            onColor = "black";
+            offColor = "white";
+        } else if (newScheme === "RB") {
+            onColor = "red";
+            offColor = "blue";
+        } else if (newScheme === "CG") {
+            onColor = "cyan";
+            offColor = "green";
+        }
+    }
+
+    canvas.addEventListener('click', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const i = Math.floor(y / cellSize);
+        const j = Math.floor(x / cellSize);
+        grid[i][j] = grid[i][j] === ON ? OFF : ON;
+        drawGrid(grid, n, ctx, cellSize);
+    });
+
+    document.getElementById('zoomIn').addEventListener('click', () => {
+        cellSize += 1;
+        canvas.width = n * cellSize;
+        canvas.height = n * cellSize;
+        drawGrid(grid, n, ctx, cellSize);
+    });
+
+    document.getElementById('zoomOut').addEventListener('click', () => {
+        if (cellSize > 1) {
+            cellSize -= 1;
+            canvas.width = n * cellSize;
+            canvas.height = n * cellSize;
+            drawGrid(grid, n, ctx, cellSize);
+        }
+    });
+
+    document.getElementById('toggleWrap').addEventListener('click', () => {
+        isWrapped = !isWrapped;
+    });
+
+    document.getElementById('gridSize').addEventListener('change', (event) => {
+        const newSize = parseInt(event.target.value);
+        changeGridSize(newSize);
+    });
+
+    document.getElementById('colorScheme').addEventListener('change', (event) => {
+        const newScheme = event.target.value;
+        setColorScheme(newScheme);
+    });
+
+    main();
+</script>
+</body>
+</html>

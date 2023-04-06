@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/JochiRaider/Game_of_life_project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" style="display: block; height: auto; border: 0; width: 680px; max-width: 100%;">
   </a>
 
 <h3 align="center">project_title</h3>

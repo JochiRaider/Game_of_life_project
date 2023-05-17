@@ -1,4 +1,4 @@
-**Onboarding Guide for New SOC Analysts**
+**Training Guide for New SOC Analysts**
 
 **Introduction**
 

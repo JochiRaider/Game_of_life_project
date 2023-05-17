@@ -1,1 +1,44 @@
-<p><strong>Onboarding Guide for New SOC Analysts</strong></p><p><strong>Introduction</strong></p><p>A Security Operations Center (SOC) is a team of security professionals who are responsible for monitoring, detecting, and responding to security incidents. SOC analysts play a critical role in protecting an organization's information assets.</p><p><strong>Understanding Security Operations</strong></p><p>SOC typically has three main functions:</p><ol><li><p><strong>Monitoring</strong>: SOC analysts monitor an organization's networks and systems for signs of malicious activity. <em>Reference: NIST Special Publication 800-92.</em></p></li><li><p><strong>Detection</strong>: SOC analysts investigate suspicious activity and determine if it is a security incident. <em>Reference: NIST Special Publication 800-83.</em></p></li><li><p><strong>Response</strong>: SOC analysts respond to security incidents by taking steps to contain the incident and mitigate the damage. <em>Reference: NIST Special Publication 800-61 Rev. 2.</em></p></li></ol><p><strong>Security Incident Response</strong></p><p>A security incident is an event that may have a negative impact on an organization's information assets. The goal of security incident response is to minimize the impact of a security incident. This involves steps to contain the incident, mitigate the damage, and restore normal operations. <em>Reference: SANS Institute's Incident Handler's Handbook.</em></p><p><strong>Security Vulnerability Management</strong></p><p>A security vulnerability is a weakness in an organization's information systems that could be exploited by an attacker. The goal of security vulnerability management is to identify, assess, and mitigate security vulnerabilities. <em>Reference: NIST Special Publication 800-40 Rev. 3.</em></p><p><strong>Security Compliance</strong></p><p>Security compliance is the process of ensuring that an organization's information security practices meet the requirements of applicable laws, regulations, and industry standards. The goal of security compliance is to protect an organization from legal liability and financial losses. <em>Reference: ISO/IEC 27001:2013 Information Security Management Systems.</em></p><p><strong>Security Tools and Technologies</strong></p><p>A variety of security tools and technologies can be used to help SOC analysts monitor, detect, and respond to security incidents. These tools include:</p><ul><li><p><strong>SIEM tools</strong>: SIEM tools collect and analyze security logs from across an organization's networks and systems. Splunk is a popular SIEM tool that can be used to collect and analyze security logs from a variety of sources, including Microsoft Defender for Endpoint. <em>Reference: Splunk Documentation.</em></p></li><li><p><strong>Endpoint security tools</strong>: Endpoint security tools are used to protect individual endpoints, such as computers and mobile devices. Microsoft Defender for Endpoint is a popular endpoint security tool that can be used to detect and respond to malware and other threats. <em>Reference: Microsoft Defender for Endpoint Documentation.</em></p></li></ul><p><strong>Conclusion</strong></p><p>This onboarding guide has provided an overview of the topics that are important for SOC analysts. By understanding these topics, you can be well on your way to a successful career in security operations.</p><p><strong>Onboarding Tips</strong></p><p>Here are some tips for onboarding a new SOC analyst:</p><ul><li>Clearly define the analyst's role and responsibilities.</li><li>Provide necessary training and resources.</li><li>Set achievable goals and expectations.</li><li>Be patient and supportive, allowing for a learning curve.</li></ul><p>By following these tips, you can help ensure that your new tier 2 SOC analyst is successful in their role. Consider formal training programs and certifications like CompTIA's Security+, CySA+, or EC-Council's Certified Ethical Hacker (CEH) for comprehensive preparation.</p></div>
+<p><strong>Onboarding Guide for New SOC Analysts</strong></p>
+   <p><strong>Introduction</strong></p>
+   <p>A Security Operations Center (SOC) is a team of security professionals who are responsible for monitoring, detecting, and responding to security incidents. SOC analysts play a critical role in protecting an organization's information assets.</p>
+   <p><strong>Understanding Security Operations</strong></p>
+   <p>SOC typically has three main functions:</p>
+   <ol>
+      <li>
+         <p><strong>Monitoring</strong>: SOC analysts monitor an organization's networks and systems for signs of malicious activity. <em>Reference: <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf" target="_new">NIST Special Publication 800-92</a></em>.</p>
+      </li>
+      <li>
+         <p><strong>Detection</strong>: SOC analysts investigate suspicious activity and determine if it is a security incident. <em>Reference: <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf" target="_new">NIST Special Publication 800-83</a></em>.</p>
+      </li>
+      <li>
+         <p><strong>Response</strong>: SOC analysts respond to security incidents by taking steps to contain the incident and mitigate the damage. <em>Reference: <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf" target="_new">NIST Special Publication 800-61 Rev. 2</a></em>.</p>
+      </li>
+   </ol>
+   <p><strong>Security Incident Response</strong></p>
+   <p>A security incident is an event that may have a negative impact on an organization's information assets. The goal of security incident response is to minimize the impact of a security incident. This involves steps to contain the incident, mitigate the damage, and restore normal operations. <em>Reference: <a href="https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901" target="_new">SANS Institute's Incident Handler's Handbook</a></em>.</p>
+   <p><strong>Security Vulnerability Management</strong></p>
+   <p>A security vulnerability is a weakness in an organization's information systems that could be exploited by an attacker. The goal of security vulnerability management is to identify, assess, and mitigate security vulnerabilities. <em>Reference: <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-40r4.pdf" target="_new">NIST Special Publication 800-40 Rev. 3</a></em>.</p>
+   <p><strong>Security Compliance</strong></p>
+   <p>Security compliance is the process of ensuring that an organization's information security practices meet the requirements of applicable laws, regulations, and industry standards. The goal of security compliance is to protect an organization from legal liability and financial losses. <em>Reference: <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_new">ISO/IEC 27001:2013 Information Security Management Systems</a></em>.</p>
+   <p><strong>Security Tools and Technologies</strong></p>
+   <p>A variety of security tools and technologies can be used to help SOC analysts monitor, detect, and respond to security incidents. These tools include:</p>
+   <ul>
+      <li>
+         <p><strong>SIEM tools</strong>: SIEM tools collect and analyze security logs from across an organization's networks and systems. Splunk is a popular SIEM tool that can be used to collect and analyze security logs from a variety of sources, including Microsoft Defender for Endpoint. <em>Reference: <a href="https://docs.splunk.com/Documentation" target="_new">Splunk Documentation</a></em>.</p>
+      </li>
+      <li>
+         <p><strong>Endpoint security tools</strong>: Endpoint security tools are used to protect individual endpoints, such as computers and mobile devices. Microsoft Defender for Endpoint is a popular endpoint security tool that can be used to detect and respond to malware and other threats. <em>Reference: <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection" target="_new">Microsoft Defender for Endpoint Documentation</a></em>.</p>
+      </li>
+   </ul>
+   <p><strong>Conclusion</strong></p>
+<p>This onboarding guide has provided an overview of the topics that are important for SOC analysts. By understanding these topics, you can be well on your way to a successful career in security operations.</p>
+<p><strong>Onboarding Tips</strong></p>
+<p>Here are some tips for onboarding a new SOC analyst:</p>
+<ul>
+   <li>Clearly define the analyst's role and responsibilities.</li>
+   <li>Provide necessary training and resources.</li>
+   <li>Set achievable goals and expectations.</li>
+   <li>Be patient and supportive, allowing for a learning curve.</li>
+</ul>
+<p>By following these tips, you can help ensure that your new SOC analyst is successful in their role. Consider formal training programs and certifications like CompTIA's Security+, CySA+, or EC-Council's Certified Ethical Hacker (CEH) for comprehensive preparation.</p>
+</div>

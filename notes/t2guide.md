@@ -21,7 +21,7 @@ A security incident is an event that may have a negative impact on an organizati
 
 **Security Vulnerability Management**
 
-A security vulnerability is a weakness in an organization's information systems that could be exploited by an attacker. The goal of security vulnerability management is to identify, assess, and mitigate security vulnerabilities. _Reference: [NIST Special Publication 800-40 Rev. 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-40r4.pdf)_.
+A security vulnerability is a weakness in an organization's information systems that could be exploited by an attacker. The goal of security vulnerability management is to identify, assess, and mitigate security vulnerabilities. _Reference: [NIST Special Publication 800-40 Rev. 4](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-40r4.pdf)_.
 
 **Security Compliance**
 

@@ -25,7 +25,7 @@ A security vulnerability is a weakness in an organization's information systems 
 
 **Security Compliance**
 
-Security compliance is the process of ensuring that an organization's information security practices meet the requirements of applicable laws, regulations, and industry standards. The goal of security compliance is to protect an organization from legal liability and financial losses. _Reference: [ISO/IEC 27001:2013 Information Security Management Systems](https://www.iso.org/isoiec-27001-information-security.html)_.
+Security compliance is the process of ensuring that an organization's information security practices meet the requirements of applicable laws, regulations, and industry standards. The goal of security compliance is to protect an organization from legal liability and financial losses. _Reference: [Center for Internet Security Critical Security Controls Version 8](https://www.cisecurity.org/controls/v8)_.
 
 **Security Tools and Technologies**
 

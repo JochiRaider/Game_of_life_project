@@ -35,18 +35,23 @@ A variety of security tools and technologies can be used to help SOC analysts mo
     
 *   **Endpoint security tools**: Endpoint security tools are used to protect individual endpoints, such as computers and mobile devices. Microsoft Defender for Endpoint is a popular endpoint security tool that can be used to detect and respond to malware and other threats. _Reference: [Microsoft Defender for Endpoint Documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)_.
     
+**Security Soft Skills**
 
-**Conclusion**
+In addition to technical knowledge and skills, SOC analysts also need a range of soft skills to succeed in their role. These include:
 
-This onboarding guide has provided an overview of the topics that are important for SOC analysts. By understanding these topics, you can be well on your way to a successful career in security operations.
+1.  **Critical Thinking**: Security analysts must be able to evaluate complex security data and make decisions about its significance.
+    
+2.  **Communication Skills**: Security analysts need to effectively communicate with team members, managers, and sometimes even clients to report incidents and explain their findings.
+    
+3.  **Problem-Solving Skills**: When a security threat is detected, analysts must act quickly to help mitigate the damage. This often involves solving complex IT problems.
+    
+4.  **Attention to Detail**: Small anomalies can often indicate larger security issues. As such, analysts must be detail-oriented to notice these signs.
+    
 
-**Onboarding Tips**
+**Continuous Learning**
 
-Here are some tips for onboarding a new SOC analyst:
+The field of cybersecurity is constantly evolving, with new threats and technologies emerging all the time. As a result, SOC analysts must be committed to continuous learning and professional development. This can involve:
 
-*   Clearly define the analyst's role and responsibilities.
-*   Provide necessary training and resources.
-*   Set achievable goals and expectations.
-*   Be patient and supportive, allowing for a learning curve.
-
-By following these tips, you can help ensure that your new SOC analyst is successful in their role. Consider formal training programs and certifications like CompTIA's Security+, CySA+, or EC-Council's Certified Ethical Hacker (CEH) for comprehensive preparation.
+*   Regular training sessions.
+*   Staying updated with the latest cybersecurity news and trends.
+*   Gaining additional certifications.
